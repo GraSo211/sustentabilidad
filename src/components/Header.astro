@@ -1,13 +1,15 @@
 ---
+import { Image } from "astro:assets";
+
 
 ---
 
 <header>
-    <span>Green Software</span>
+    <span>Green Software <Image src="/favicon.svg" height={30} width={30} alt={"Hoja"}></Image></span>
     <nav>
-        <a href="">Inicio</a>
-        <a href="">Mapa Mental</a>
-        <a href="">Más informacion</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#mapamental">Mapa Mental</a>
+        <a href="#morecontent">Más Contenido</a>
     </nav>
 </header>
 
@@ -36,5 +38,11 @@
         gap: 5%;
         justify-content: end;
 
+    }
+    a{
+        color: white;
+        &:hover{
+            color: gray;
+        }
     }
 </style>

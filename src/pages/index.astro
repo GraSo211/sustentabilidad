@@ -8,7 +8,7 @@ import { Image, imageConfig } from "astro:assets";
     <main>
         <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
         <div class="column-center">
-            <h1>SUSTENTABILIDAD</h1>
+            <h1 id="inicio">SUSTENTABILIDAD</h1>
 
             <ContentSection
                 title="¿Qué es la sustentabilidad?"
@@ -151,7 +151,7 @@ import { Image, imageConfig } from "astro:assets";
                 y la participación ciudadana.`
             >
                 <iframe
-                slot="right"
+                    slot="right"
                     width="560"
                     height="315"
                     class="video"
@@ -174,30 +174,36 @@ import { Image, imageConfig } from "astro:assets";
                 content=`Los costos asociados con la sustentabilidad varían según el contexto y la escala, e incluyen inversiones en tecnologías limpias, programas de eficiencia energética, conservación de
                 recursos naturales, la readaptación de los procesos de una empresa, educación y capacitación de empleados, y cumplimiento de regulaciones ambientales.`
             />
-            
-            <h2>Mapa Mental Acerca de la Sustentabilidad</h2>
-            <Image src="/mapamental.jpg"  width={1500} height={1000} alt={"Mapa mental de los contenidos de sustentabilidad."}></Image>
 
-            <h2>Mas Contenido</h2>
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/CLq6tykbIrk?si=FZNsFUWauizWjLM3"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
+            <h2 id="mapamental">Mapa Mental Acerca de la Sustentabilidad</h2>
+            <Image src="/mapamental.jpg" width={1000} height={800} alt={"Mapa mental de los contenidos de sustentabilidad."} />
 
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/X7V-g0hhA5E?si=ok5l9OjI4uhSYC9O"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen></iframe>
+            <div class="moreContent">
+                <h2 id="morecontent">Mas Contenido</h2>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/CLq6tykbIrk?si=FZNsFUWauizWjLM3"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/X7V-g0hhA5E?si=ok5l9OjI4uhSYC9O"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+                <a target="_blank" href="https://www.bbva.com/es/sostenibilidad/que-es-la-sostenibilidad-un-camino-urgente-y-sin-marcha-atras/">¿Qué es la sostenibilidad? - BBVA</a>
+                <a target="_blank" href="https://www.argentina.gob.ar/ciencia/argentina-innovadora-2030/plan-argentina-innovadora-2020/ambiente-y-desarrollo-sustentable">Ambiente y Desarrollo Sustentable - Argentina.gob.ar</a>
+                <a target="_blank" href="https://ridaa.unq.edu.ar/bitstream/handle/20.500.11807/154/TFI_2015_larrouyet_003.pdf?sequence=1">Desarrollo sustentable : origen, evolución y su
+                    implementación para el cuidado del planeta - Universidad Nacional de Quilmes</a>
+            </div>
         </div>
     </main>
 </Layout>
@@ -208,13 +214,14 @@ import { Image, imageConfig } from "astro:assets";
         font-size: 20px;
         line-height: 1.6;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 25% 50% 25%;
         place-content: center;
+        
     }
     .column-center {
         grid-column: 2/3;
 
-        width: full;
+        
     }
 
     h1 {
@@ -237,5 +244,17 @@ import { Image, imageConfig } from "astro:assets";
     }
     .image {
         align-self: center;
+    }
+
+    .moreContent{
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+    }
+    a{
+        color: white;
+        &:hover{
+            color: gray;
+        }
     }
 </style>
