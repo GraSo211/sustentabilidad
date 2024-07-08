@@ -6,7 +6,6 @@ import { Image, imageConfig } from "astro:assets";
 
 <Layout title="Sustentabilidad">
     <main>
-        <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
         <div class="column-center">
             <h1 id="inicio">SUSTENTABILIDAD</h1>
 
@@ -57,7 +56,7 @@ import { Image, imageConfig } from "astro:assets";
                 title="¿Para qué es importante la sustentabilidad?"
                 content=" La sustentabilidad es importante porque nos permite vivir con, asegurando que los recursos de nuestro entorno natural y social, estén disponibles para las generaciones futuras. Promueve la conservación de la biodiversidad, la protección del medio ambiente, la equidad social y el crecimiento económico a largo plazo."
             >
-                <Image slot="right" src="/sustentabilidad-image2.webp" height={300} width={600} alt={"Imagen de un mundo con una mitad sustentable y la otra mitad no sustentable"} />
+                <Image class={"img"} slot="right" src="/sustentabilidad-image2.webp" height={300} width={600} alt={"Imagen de un mundo con una mitad sustentable y la otra mitad no sustentable"} />
             </ContentSection>
 
             <ContentSection title={"Actores involucrados Gobiernos:"}>
@@ -81,7 +80,7 @@ import { Image, imageConfig } from "astro:assets";
                             sustentables, los consumidores pueden influir en las prácticas empresariales y promover un cambio hacia un modelo económico más sustentable.
                         </li>
                     </ul>
-                    <Image src="/sustentabilidad-image3.jpg" alt={"Gente colaborando para un mundo sustentable."} height={300} width={600} />
+                    <Image class={"img"} src="/sustentabilidad-image3.jpg" alt={"Gente colaborando para un mundo sustentable."} height={300} width={600} />
                 </div>
             </ContentSection>
 
@@ -135,7 +134,7 @@ import { Image, imageConfig } from "astro:assets";
                             para la fauna y la flora silvestres.
                         </li>
                     </ul>
-                    <Image class="image" src="/sustentabilidad-image1.jpg" height={400} width={800} alt={"Imagen sobre sustentabilidad."} />
+                    <Image class="image img" src="/sustentabilidad-image1.jpg" height={400} width={800} alt={"Imagen sobre sustentabilidad."} />
                 </div>
             </ContentSection>
 
@@ -173,10 +172,14 @@ import { Image, imageConfig } from "astro:assets";
                 title="¿Cuánto cuesta?"
                 content=`Los costos asociados con la sustentabilidad varían según el contexto y la escala, e incluyen inversiones en tecnologías limpias, programas de eficiencia energética, conservación de
                 recursos naturales, la readaptación de los procesos de una empresa, educación y capacitación de empleados, y cumplimiento de regulaciones ambientales.`
-            />
+            />  
+            <div>
+                <h2 id="mapamental">Mapa Mental Acerca de la Sustentabilidad</h2>
+                <Image src="/mapamental.jpg" id={"mapa"} width={600} height={300} alt={"Mapa mental de los contenidos de sustentabilidad."} />
+                <a target="_blank" href="https://sustentabilidad.vercel.app/mapamental.jpg">Para una mejor visualizacion haga click aqui</a>
+            </div>
 
-            <h2 id="mapamental">Mapa Mental Acerca de la Sustentabilidad</h2>
-            <Image src="/mapamental.jpg" width={1000} height={800} alt={"Mapa mental de los contenidos de sustentabilidad."} />
+            
 
             <div class="moreContent">
                 <h2 id="morecontent">Mas Contenido</h2>
@@ -238,6 +241,7 @@ import { Image, imageConfig } from "astro:assets";
         display: flex;
         align-items: center;
     }
+
     .donde {
         display: flex;
         flex-direction: column;
@@ -257,4 +261,46 @@ import { Image, imageConfig } from "astro:assets";
             color: gray;
         }
     }
+
+    #mapa{
+        align-self: center;
+        width: 100%;
+        height: 10%;
+        aspect-ratio: 16/9;
+        
+
+        
+    }
+
+    @media (max-width: 1000px) {
+        main{
+            display: flex;
+            width: 100%;
+            
+            
+        }
+        .column-center{
+            width: 90%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe{
+            width: 90%;
+        }
+        .img{
+            width: 90%;
+            aspect-ratio: 16/9;
+            height: 90%;
+            
+
+        }
+    }
+    @media (max-width: 1920px) {
+        .actores {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 </style>
