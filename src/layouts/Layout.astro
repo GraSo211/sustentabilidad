@@ -1,10 +1,9 @@
 ---
 interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
-
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -12,55 +11,70 @@ import Footer from "../components/Footer.astro";
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Header></Header>
-		<slot />
-		<Footer></Foooter>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Astro description" />
+        <meta name="viewport" content="width=device-width" />
+        <!-- Primary Meta Tags -->
+        <title>Sustentabilidad</title>
+        <meta name="title" content="Sustentabilidad" />
+        <meta name="description" content="Pagina realizada para presentar trabajo de Green Software." />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://sustentabilidad.vercel.app" />
+        <meta property="og:title" content="Sustentabilidad" />
+        <meta property="og:description" content="Pagina realizada para presentar trabajo de Green Software." />
+    
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://sustentabilidad.vercel.app" />
+        <meta property="twitter:title" content="Sustentabilidad" />
+        <meta property="twitter:description" content="Pagina realizada para presentar trabajo de Green Software." />
+
+
+        <!-- Meta Tags Generated with https://metatags.io -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <Header />
+        <slot />
+        <Footer />
+    </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-color: rgba(3, 7, 18, 1);
+    :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+    }
+    html {
+        font-family: system-ui, sans-serif;
+        background: #13151a;
+        background-color: rgba(3, 7, 18, 1);
         background: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(3, 5, 65, 0.659), rgba(0, 0, 0, 1));
         background-size: 100vw 100vh;
         background-repeat: no-repeat;
         background-attachment: fixed;
-		scroll-behavior: smooth;
-	}
-	body{
-		margin: 0;
-	}
-	
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+        scroll-behavior: smooth;
+    }
+    body {
+        margin: 0;
+    }
+
+    code {
+        font-family:
+            Menlo,
+            Monaco,
+            Lucida Console,
+            Liberation Mono,
+            DejaVu Sans Mono,
+            Bitstream Vera Sans Mono,
+            Courier New,
+            monospace;
+    }
 </style>
