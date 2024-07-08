@@ -1,93 +1,209 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ContentSection from "../components/ContentSection.astro";
+import { Image, imageConfig } from "astro:assets";
 ---
 
 <Layout title="Sustentabilidad">
     <main>
+        <div class="absolute top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"></div>
         <div class="column-center">
             <h1>SUSTENTABILIDAD</h1>
-            <h2>¿Qué es la sustentabilidad?</h2>
-            <p>
-                La sustentabilidad es el uso racional y responsable de los recursos destinados a la satisfacción de necesidades humanas intentando utilizar la menor cantidad de ellos y de generar
-                pocos desperdicios.
-            </p>
+
+            <ContentSection
+                title="¿Qué es la sustentabilidad?"
+                content="La sustentabilidad es el uso racional y responsable de los recursos destinados a la satisfacción de necesidades humanas intentando utilizar la menor cantidad de ellos y de generar pocos desperdicios."
+            >
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/VHbkOMwTsSs?si=Je95UqTOXdwNpZxy"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    class="video"
+                    slot="right"
+                    allowfullscreen></iframe>
+            </ContentSection>
+
+            <ContentSection
+                title="¿Por qué debemos preocuparnos por la sustentabilidad?"
+                content=" Debemos preocuparnos por la sustentabilidad porque el actual modelo de desarrollo está agotando los recursos naturales y generando impactos negativos en el medio ambiente y la sociedad. Si no tomamos medidas para cambiar hacia prácticas más sustentables, corremos el riesgo de comprometer nuestro propio bienestar y el de las generaciones futuras. La sustentabilidad es fundamental para asegurar un futuro próspero y equitativo para todos."
+            >
+                <div class="videos" slot="down">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/ZvX9H_Bdqjo?si=leK_PY2PNPSUX_Zg"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube.com/embed/2t60OLIFlNY?si=o_bSJKOWNogXqcNA"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
+            </ContentSection>
+
+            <ContentSection
+                title="¿Para qué es importante la sustentabilidad?"
+                content=" La sustentabilidad es importante porque nos permite vivir con, asegurando que los recursos de nuestro entorno natural y social, estén disponibles para las generaciones futuras. Promueve la conservación de la biodiversidad, la protección del medio ambiente, la equidad social y el crecimiento económico a largo plazo."
+            >
+                <Image slot="right" src="/sustentabilidad-image2.webp" height={300} width={600} alt={"Imagen de un mundo con una mitad sustentable y la otra mitad no sustentable"} />
+            </ContentSection>
+
+            <ContentSection title={"Actores involucrados Gobiernos:"}>
+                <div class="actores" slot="down">
+                    <ul>
+                        <li>
+                            Gobiernos: Los gobiernos desempeñan un papel fundamental en la formulación de políticas y regulaciones relacionadas con la sustentabilidad a nivel local, nacional e
+                            internacional. Esto incluye la implementación de leyes ambientales, el establecimiento de estándares de eficiencia energética y la promoción de prácticas sustentables en
+                            diferentes sectores.
+                        </li>
+                        <li>
+                            Empresas: Las empresas tienen la responsabilidad de adoptar prácticas empresariales responsables que minimicen su impacto ambiental y social. Esto incluye la adopción de
+                            políticas de responsabilidad social corporativa, la implementación de prácticas de producción limpia y la inversión en tecnologías sostenibles.
+                        </li>
+                        <li>
+                            Comunidades y Sociedad Civil: Las comunidades locales y la sociedad civil desempeñan un papel activo en la promoción de la sustentabilidad a nivel local. Esto incluye la
+                            participación en proyectos de desarrollo comunitario, la defensa de los derechos ambientales y la promoción de estilos de vida sustentables.
+                        </li>
+                        <li>
+                            Consumidores: Los consumidores tienen un poder significativo para promover la sustentabilidad a través de sus decisiones de compra. Al optar por productos y servicios
+                            sustentables, los consumidores pueden influir en las prácticas empresariales y promover un cambio hacia un modelo económico más sustentable.
+                        </li>
+                    </ul>
+                    <Image src="/sustentabilidad-image3.jpg" alt={"Gente colaborando para un mundo sustentable."} height={300} width={600} />
+                </div>
+            </ContentSection>
+
+            <ContentSection
+                title="¿Dónde debe tener lugar?"
+                content=`La sustentabilidad tiene lugar en todos los aspectos de la sociedad y la economía, desde la producción y consumo de bienes y servicios hasta la planificación urbana, la gestión de
+                recursos naturales y la toma de decisiones políticas. En términos más específicos, la sustentabilidad se manifiesta en:`
+            >
+                <div class="donde" slot="down">
+                    <h3>Ámbitos de Aplicación de la Sustentabilidad:</h3>
+                    <ul>
+                        <li>
+                            Gestión Ambiental: Incluye la conservación de recursos naturales como el agua, el suelo y la biodiversidad, la reducción de emisiones contaminantes y la mitigación del
+                            cambio climático.
+                        </li>
+                        <li>
+                            Desarrollo Urbano: Implica la planificación de ciudades y comunidades sustentables, con infraestructuras eficientes, transporte público accesible, espacios verdes y
+                            edificaciones energéticamente eficientes.
+                        </li>
+                        <li>
+                            Producción y Consumo Responsables: Se refiere a la adopción de prácticas empresariales responsables, como la producción limpia, el uso eficiente de recursos, la reducción
+                            de residuos y la promoción de productos sostenibles.
+                        </li>
+                        <li>
+                            Energía: Incluye la transición hacia fuentes de energía renovable, la mejora de la eficiencia energética y la promoción de tecnologías limpias. Educación y Concienciación:
+                            Implica la sensibilización sobre la importancia de la sustentabilidad y la promoción de estilos de vida sustentables a través de la educación formal e informal.
+                        </li>
+                        <li>
+                            Gestión de Recursos Naturales: Comprende la gestión sustentable de recursos como la tierra, el agua, los bosques y los océanos, para garantizar su disponibilidad a largo
+                            plazo.
+                        </li>
+                    </ul>
+                    <h3>Fisicamente</h3>
+                    <ul>
+                        <li>
+                            Edificios sostenibles: La construcción de edificios que utilizan materiales ecológicos, tecnologías de eficiencia energética y diseño pasivo para reducir el consumo de
+                            energía y minimizar el impacto ambiental.
+                        </li>
+                        <li>
+                            Parques y espacios verdes urbanos: La creación y preservación de áreas verdes dentro de las ciudades para promover la biodiversidad, mejorar la calidad del aire y
+                            proporcionar espacios recreativos para la comunidad. Instalaciones de energía renovable: La construcción de infraestructuras para la generación de energía a partir de
+                            fuentes renovables, como parques eólicos, plantas solares y centrales hidroeléctricas, para reducir la dependencia de los combustibles fósiles y disminuir las emisiones de
+                            gases de efecto invernadero.
+                        </li>
+                        <li>
+                            Sistemas de transporte sostenible: La implementación de redes de transporte público eficientes, la construcción de infraestructuras para peatones y ciclistas, y la
+                            promoción de vehículos eléctricos para reducir la congestión del tráfico y las emisiones de carbono asociadas con el transporte.
+                        </li>
+                        <li>
+                            Áreas protegidas y reservas naturales: La designación y conservación de áreas naturales para proteger la biodiversidad, preservar los ecosistemas y proporcionar hábitats
+                            para la fauna y la flora silvestres.
+                        </li>
+                    </ul>
+                    <Image class="image" src="/sustentabilidad-image1.jpg" height={400} width={800} alt={"Imagen sobre sustentabilidad."} />
+                </div>
+            </ContentSection>
+
+            <ContentSection
+                title="¿Cuándo debe tener lugar?"
+                content=`Este no tiene un momento en específico, debe ser un principio moral que se integre en todas las decisiones y acciones de la gente. Sin embargo, si se nos anima a seguir este camino lo
+                más rápido posible debido al aumento en las adversidades tanto ambientales como sociales del cambio climático.`
+            />
+
+            <ContentSection
+                title="¿Cómo se gestionan?"
+                content=`Se gestionan mediante la adopción de enfoques integrados que equilibren los aspectos económicos, sociales y ambientales, así como a través de la colaboración entre diferentes sectores
+                y la participación ciudadana.`
+            >
+                <iframe
+                slot="right"
+                    width="560"
+                    height="315"
+                    class="video"
+                    src="https://www.youtube.com/embed/2fn4NW4NWF4?si=ZBJB1a4FeQmKZkbP"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </ContentSection>
+
+            <ContentSection
+                title="¿Con qué gestionar?"
+                content=`Se gestionan con políticas y regulaciones, incentivos económicos, tecnologías sostenibles, educación, concienciación pública, investigación, desarrollo y prácticas empresariales
+                responsables.`
+            />
+
+            <ContentSection
+                title="¿Cuánto cuesta?"
+                content=`Los costos asociados con la sustentabilidad varían según el contexto y la escala, e incluyen inversiones en tecnologías limpias, programas de eficiencia energética, conservación de
+                recursos naturales, la readaptación de los procesos de una empresa, educación y capacitación de empleados, y cumplimiento de regulaciones ambientales.`
+            />
+            
+            <h2>Mapa Mental Acerca de la Sustentabilidad</h2>
+            <Image src="/mapamental.jpg"  width={1500} height={1000} alt={"Mapa mental de los contenidos de sustentabilidad."}></Image>
+
+            <h2>Mas Contenido</h2>
             <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/VHbkOMwTsSs?si=Je95UqTOXdwNpZxy"
+                src="https://www.youtube.com/embed/CLq6tykbIrk?si=FZNsFUWauizWjLM3"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen></iframe>
 
-            <h2>¿Por qué debemos preocuparnos por la sustentabilidad?</h2>
-            <p>
-                Debemos preocuparnos por la sustentabilidad porque el actual modelo de desarrollo está agotando los recursos naturales y generando impactos negativos en el medio ambiente y la
-                sociedad. Si no tomamos medidas para cambiar hacia prácticas más sustentables, corremos el riesgo de comprometer nuestro propio bienestar y el de las generaciones futuras. La
-                sustentabilidad es fundamental para asegurar un futuro próspero y equitativo para todos.
-            </p>
-            <h2>¿Para qué es importante la sustentabilidad?</h2>
-            <p>
-                La sustentabilidad es importante porque nos permite vivir con, asegurando que los recursos de nuestro entorno natural y social, estén disponibles para las generaciones futuras.
-                Promueve la conservación de la biodiversidad, la protección del medio ambiente, la equidad social y el crecimiento económico a largo plazo.
-            </p>
-            <h2>Actores involucrados Gobiernos:</h2>
-            <p>
-                Los gobiernos desempeñan un papel fundamental en la formulación de políticas y regulaciones relacionadas con la sustentabilidad a nivel local, nacional e internacional. Esto incluye la
-                implementación de leyes ambientales, el establecimiento de estándares de eficiencia energética y la promoción de prácticas sustentables en diferentes sectores. Empresas: Las empresas
-                tienen la responsabilidad de adoptar prácticas empresariales responsables que minimicen su impacto ambiental y social. Esto incluye la adopción de políticas de responsabilidad social
-                corporativa, la implementación de prácticas de producción limpia y la inversión en tecnologías sostenibles. Comunidades y Sociedad Civil: Las comunidades locales y la sociedad civil
-                desempeñan un papel activo en la promoción de la sustentabilidad a nivel local. Esto incluye la participación en proyectos de desarrollo comunitario, la defensa de los derechos
-                ambientales y la promoción de estilos de vida sustentables. Consumidores: Los consumidores tienen un poder significativo para promover la sustentabilidad a través de sus decisiones de
-                compra. Al optar por productos y servicios sustentables, los consumidores pueden influir en las prácticas empresariales y promover un cambio hacia un modelo económico más sustentable.
-            </p>
-            <h2>¿Dónde debe tener lugar?</h2>
-            <p>
-                La sustentabilidad tiene lugar en todos los aspectos de la sociedad y la economía, desde la producción y consumo de bienes y servicios hasta la planificación urbana, la gestión de
-                recursos naturales y la toma de decisiones políticas. En términos más específicos, la sustentabilidad se manifiesta en: Gestión Ambiental: Incluye la conservación de recursos naturales
-                como el agua, el suelo y la biodiversidad, la reducción de emisiones contaminantes y la mitigación del cambio climático. Desarrollo Urbano: Implica la planificación de ciudades y
-                comunidades sustentables, con infraestructuras eficientes, transporte público accesible, espacios verdes y edificaciones energéticamente eficientes. Producción y Consumo Responsables:
-                Se refiere a la adopción de prácticas empresariales responsables, como la producción limpia, el uso eficiente de recursos, la reducción de residuos y la promoción de productos
-                sostenibles. Energía: Incluye la transición hacia fuentes de energía renovable, la mejora de la eficiencia energética y la promoción de tecnologías limpias. Educación y Concienciación:
-                Implica la sensibilización sobre la importancia de la sustentabilidad y la promoción de estilos de vida sustentables a través de la educación formal e informal. Gestión de Recursos
-                Naturales: Comprende la gestión sustentable de recursos como la tierra, el agua, los bosques y los océanos, para garantizar su disponibilidad a largo plazo. Físicamente Edificios
-                sostenibles: La construcción de edificios que utilizan materiales ecológicos, tecnologías de eficiencia energética y diseño pasivo para reducir el consumo de energía y minimizar el
-                impacto ambiental. Parques y espacios verdes urbanos: La creación y preservación de áreas verdes dentro de las ciudades para promover la biodiversidad, mejorar la calidad del aire y
-                proporcionar espacios recreativos para la comunidad. Instalaciones de energía renovable: La construcción de infraestructuras para la generación de energía a partir de fuentes
-                renovables, como parques eólicos, plantas solares y centrales hidroeléctricas, para reducir la dependencia de los combustibles fósiles y disminuir las emisiones de gases de efecto
-                invernadero. Sistemas de transporte sostenible: La implementación de redes de transporte público eficientes, la construcción de infraestructuras para peatones y ciclistas, y la
-                promoción de vehículos eléctricos para reducir la congestión del tráfico y las emisiones de carbono asociadas con el transporte. Áreas protegidas y reservas naturales: La designación y
-                conservación de áreas naturales para proteger la biodiversidad, preservar los ecosistemas y proporcionar hábitats para la fauna y la flora silvestres.
-            </p>
-            <h2>¿Cuándo debe tener lugar?</h2>
-            <p>
-                Este no tiene un momento en específico, debe ser un principio moral que se integre en todas las decisiones y acciones de la gente. Sin embargo, si se nos anima a seguir este camino lo
-                más rápido posible debido al aumento en las adversidades tanto ambientales como sociales del cambio climático.
-            </p>
-            <h2>¿Cómo se gestionan?</h2>
-            <p>
-                Se gestionan mediante la adopción de enfoques integrados que equilibren los aspectos económicos, sociales y ambientales, así como a través de la colaboración entre diferentes sectores
-                y la participación ciudadana.
-            </p>
-            <h2>¿Con qué gestionar?</h2>
-            <p>
-                Se gestionan con políticas y regulaciones, incentivos económicos, tecnologías sostenibles, educación, concienciación pública, investigación, desarrollo y prácticas empresariales
-                responsables.
-            </p>
-            <h2>¿Cuánto cuesta?</h2>
-            <p>
-                Los costos asociados con la sustentabilidad varían según el contexto y la escala, e incluyen inversiones en tecnologías limpias, programas de eficiencia energética, conservación de
-                recursos naturales, la readaptación de los procesos de una empresa, educación y capacitación de empleados, y cumplimiento de regulaciones ambientales.
-            </p>
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/X7V-g0hhA5E?si=ok5l9OjI4uhSYC9O"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
         </div>
     </main>
 </Layout>
 
 <style>
     main {
-        margin: auto;
-        min-height: 100%;
         color: white;
         font-size: 20px;
         line-height: 1.6;
@@ -104,7 +220,22 @@ import Layout from "../layouts/Layout.astro";
     h1 {
         text-align: center;
     }
-
-    divardo {
+    .video {
+        width: 100%;
+    }
+    .videos {
+        display: flex;
+        gap: 10px;
+    }
+    .actores {
+        display: flex;
+        align-items: center;
+    }
+    .donde {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        align-self: center;
     }
 </style>
